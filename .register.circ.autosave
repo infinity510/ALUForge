@@ -19,7 +19,7 @@
   <lib desc="#BFH-Praktika" name="10"/>
   <lib desc="#Input/Output-Extra" name="11"/>
   <lib desc="#Soc" name="12"/>
-  <main name="ALUForge"/>
+  <main name="registor"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -53,31 +53,6 @@
     <tool name="D Flip-Flop"/>
     <tool name="Register"/>
   </toolbar>
-  <circuit name="ALUForge">
-    <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="ALUForge"/>
-    <a name="circuitnamedboxfixedsize" val="true"/>
-    <a name="simulationFrequency" val="1.0"/>
-    <comp lib="5" loc="(410,610)" name="ROM">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="contents">addr/data: 8 16
-0
-</a>
-      <a name="dataWidth" val="16"/>
-    </comp>
-    <comp loc="(1670,300)" name="registor">
-      <a name="label" val="PC"/>
-    </comp>
-    <comp loc="(1670,590)" name="registor">
-      <a name="label" val="A"/>
-    </comp>
-    <comp loc="(1670,870)" name="registor">
-      <a name="label" val="ACC"/>
-    </comp>
-    <comp loc="(1680,1130)" name="registor">
-      <a name="label" val="B"/>
-    </comp>
-  </circuit>
   <circuit name="registor">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="registor"/>

@@ -58,39 +58,124 @@
     <a name="circuit" val="registor"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="5" loc="(310,190)" name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="F0"/>
-      <a name="trigger" val="high"/>
+    <comp lib="0" loc="(100,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="CLOCK"/>
     </comp>
-    <comp lib="5" loc="(310,270)" name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="trigger" val="high"/>
+    <comp lib="0" loc="(130,160)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="WRITE"/>
     </comp>
-    <comp lib="5" loc="(310,350)" name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="trigger" val="high"/>
+    <comp lib="0" loc="(190,180)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="I0"/>
     </comp>
-    <comp lib="5" loc="(310,420)" name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="trigger" val="high"/>
+    <comp lib="0" loc="(190,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="I1"/>
     </comp>
-    <comp lib="5" loc="(310,490)" name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="trigger" val="high"/>
+    <comp lib="0" loc="(190,380)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="I2"/>
     </comp>
-    <comp lib="5" loc="(310,560)" name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="trigger" val="high"/>
+    <comp lib="0" loc="(190,480)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="I3"/>
     </comp>
-    <comp lib="5" loc="(310,630)" name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="trigger" val="high"/>
+    <comp lib="0" loc="(190,580)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="I4"/>
     </comp>
-    <comp lib="5" loc="(310,700)" name="D Flip-Flop">
-      <a name="appearance" val="logisim_evolution"/>
-      <a name="trigger" val="high"/>
+    <comp lib="0" loc="(190,680)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="I5"/>
     </comp>
+    <comp lib="0" loc="(190,780)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="I6"/>
+    </comp>
+    <comp lib="0" loc="(190,880)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="I7"/>
+    </comp>
+    <comp lib="0" loc="(680,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(700,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp loc="(560,140)" name="Dflipflop">
+      <a name="label" val="C1"/>
+    </comp>
+    <comp loc="(560,240)" name="Dflipflop">
+      <a name="label" val="C2"/>
+    </comp>
+    <comp loc="(560,340)" name="Dflipflop">
+      <a name="label" val="C3"/>
+    </comp>
+    <comp loc="(560,440)" name="Dflipflop">
+      <a name="label" val="C4"/>
+    </comp>
+    <comp loc="(560,540)" name="Dflipflop">
+      <a name="label" val="C5"/>
+    </comp>
+    <comp loc="(560,640)" name="Dflipflop">
+      <a name="label" val="C6"/>
+    </comp>
+    <comp loc="(560,740)" name="Dflipflop">
+      <a name="label" val="C7"/>
+    </comp>
+    <comp loc="(560,840)" name="Dflipflop">
+      <a name="label" val="C8"/>
+    </comp>
+    <wire from="(100,140)" to="(280,140)"/>
+    <wire from="(130,160)" to="(310,160)"/>
+    <wire from="(190,180)" to="(340,180)"/>
+    <wire from="(190,280)" to="(340,280)"/>
+    <wire from="(190,380)" to="(340,380)"/>
+    <wire from="(190,480)" to="(340,480)"/>
+    <wire from="(190,580)" to="(340,580)"/>
+    <wire from="(190,680)" to="(340,680)"/>
+    <wire from="(190,780)" to="(340,780)"/>
+    <wire from="(190,880)" to="(340,880)"/>
+    <wire from="(280,140)" to="(280,240)"/>
+    <wire from="(280,140)" to="(340,140)"/>
+    <wire from="(280,240)" to="(280,340)"/>
+    <wire from="(280,240)" to="(340,240)"/>
+    <wire from="(280,340)" to="(280,440)"/>
+    <wire from="(280,340)" to="(340,340)"/>
+    <wire from="(280,440)" to="(280,540)"/>
+    <wire from="(280,440)" to="(340,440)"/>
+    <wire from="(280,540)" to="(280,640)"/>
+    <wire from="(280,540)" to="(340,540)"/>
+    <wire from="(280,640)" to="(280,740)"/>
+    <wire from="(280,640)" to="(340,640)"/>
+    <wire from="(280,740)" to="(280,840)"/>
+    <wire from="(280,740)" to="(340,740)"/>
+    <wire from="(280,840)" to="(340,840)"/>
+    <wire from="(310,160)" to="(310,260)"/>
+    <wire from="(310,160)" to="(340,160)"/>
+    <wire from="(310,260)" to="(310,360)"/>
+    <wire from="(310,260)" to="(340,260)"/>
+    <wire from="(310,360)" to="(310,460)"/>
+    <wire from="(310,360)" to="(340,360)"/>
+    <wire from="(310,460)" to="(310,560)"/>
+    <wire from="(310,460)" to="(340,460)"/>
+    <wire from="(310,560)" to="(310,660)"/>
+    <wire from="(310,560)" to="(340,560)"/>
+    <wire from="(310,660)" to="(310,760)"/>
+    <wire from="(310,660)" to="(340,660)"/>
+    <wire from="(310,760)" to="(310,860)"/>
+    <wire from="(310,760)" to="(340,760)"/>
+    <wire from="(310,860)" to="(340,860)"/>
+    <wire from="(340,580)" to="(350,580)"/>
+    <wire from="(340,760)" to="(350,760)"/>
+    <wire from="(560,140)" to="(700,140)"/>
+    <wire from="(560,240)" to="(680,240)"/>
   </circuit>
   <circuit name="Dflipflop">
     <a name="appearance" val="logisim_evolution"/>
@@ -112,6 +197,7 @@
     <comp lib="0" loc="(780,180)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
+      <a name="label" val="val"/>
       <a name="type" val="output"/>
     </comp>
     <comp lib="1" loc="(220,240)" name="AND Gate"/>
