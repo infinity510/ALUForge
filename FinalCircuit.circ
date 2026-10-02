@@ -126,6 +126,10 @@
       <a name="appearance" val="classic"/>
       <a name="label" val="I7"/>
     </comp>
+    <comp lib="0" loc="(190,980)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="Sign"/>
+    </comp>
     <comp lib="0" loc="(700,140)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
@@ -174,6 +178,12 @@
       <a name="label" val="B7"/>
       <a name="type" val="output"/>
     </comp>
+    <comp lib="0" loc="(720,940)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="B8"/>
+      <a name="type" val="output"/>
+    </comp>
     <comp loc="(560,140)" name="Dflipflop">
       <a name="label" val="C1"/>
     </comp>
@@ -198,6 +208,7 @@
     <comp loc="(560,840)" name="Dflipflop">
       <a name="label" val="C8"/>
     </comp>
+    <comp loc="(560,940)" name="Dflipflop"/>
     <wire from="(100,140)" to="(280,140)"/>
     <wire from="(130,160)" to="(310,160)"/>
     <wire from="(190,180)" to="(340,180)"/>
@@ -208,6 +219,7 @@
     <wire from="(190,680)" to="(340,680)"/>
     <wire from="(190,780)" to="(340,780)"/>
     <wire from="(190,880)" to="(340,880)"/>
+    <wire from="(190,980)" to="(340,980)"/>
     <wire from="(280,140)" to="(280,240)"/>
     <wire from="(280,140)" to="(340,140)"/>
     <wire from="(280,240)" to="(280,340)"/>
@@ -222,7 +234,9 @@
     <wire from="(280,640)" to="(340,640)"/>
     <wire from="(280,740)" to="(280,840)"/>
     <wire from="(280,740)" to="(340,740)"/>
+    <wire from="(280,840)" to="(280,940)"/>
     <wire from="(280,840)" to="(340,840)"/>
+    <wire from="(280,940)" to="(340,940)"/>
     <wire from="(310,160)" to="(310,260)"/>
     <wire from="(310,160)" to="(340,160)"/>
     <wire from="(310,260)" to="(310,360)"/>
@@ -237,9 +251,13 @@
     <wire from="(310,660)" to="(340,660)"/>
     <wire from="(310,760)" to="(310,860)"/>
     <wire from="(310,760)" to="(340,760)"/>
+    <wire from="(310,860)" to="(310,960)"/>
     <wire from="(310,860)" to="(340,860)"/>
+    <wire from="(310,960)" to="(340,960)"/>
     <wire from="(340,580)" to="(350,580)"/>
     <wire from="(340,760)" to="(350,760)"/>
+    <wire from="(340,980)" to="(350,980)"/>
+    <wire from="(350,980)" to="(350,990)"/>
     <wire from="(560,140)" to="(700,140)"/>
     <wire from="(560,240)" to="(700,240)"/>
     <wire from="(560,340)" to="(700,340)"/>
@@ -248,6 +266,7 @@
     <wire from="(560,640)" to="(710,640)"/>
     <wire from="(560,740)" to="(710,740)"/>
     <wire from="(560,840)" to="(710,840)"/>
+    <wire from="(560,940)" to="(720,940)"/>
   </circuit>
   <circuit name="Dflipflop">
     <a name="appearance" val="logisim_evolution"/>
@@ -266,7 +285,7 @@
       <a name="appearance" val="classic"/>
       <a name="label" val="D"/>
     </comp>
-    <comp lib="0" loc="(780,180)" name="Pin">
+    <comp lib="0" loc="(660,180)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
       <a name="label" val="val"/>
@@ -307,7 +326,7 @@
     <wire from="(60,340)" to="(190,340)"/>
     <wire from="(60,340)" to="(60,400)"/>
     <wire from="(610,180)" to="(610,240)"/>
-    <wire from="(610,180)" to="(780,180)"/>
+    <wire from="(610,180)" to="(660,180)"/>
     <wire from="(620,220)" to="(620,300)"/>
   </circuit>
   <circuit name="SUB_full">
