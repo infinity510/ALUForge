@@ -31,6 +31,10 @@ Arithmetic components are divided across multiple circuit files to ensure modula
   - **Full_Subtracter & mainFullSubtracter**: Dedicated circuits that handle multi-bit subtraction using borrow logic.
 - **Complement & Utilities (`FinalCircuit.circ`)**:
   - **Rcomp**: A complement module designed to facilitate 1's or 2's complement operations, which are essential for subtraction and handling negative binary numbers.
+- **Division (`FinalCircuit.circ`)**:
+  - **DIV**: An 8-bit unsigned division module that computes the quotient and remainder of two 8-bit numbers.
+  - **DIVIDE**: The top-level signed division circuit. It takes two 8-bit operands (`A` and `B`) along with their 1-bit signs (`A_sign` and `B_sign`), executes division through `DIV`, and outputs the final 8-bit quotient and its sign (`Sign`).
+
 
 ### 3. Control Unit & Top-Level Integration (`FinalCircuit.circ`)
 - **decode**: The instruction decoder module. It takes the binary instruction format, determines the addressing mode (0, 1, 2, or 3-address), and asserts the correct control signals across the CPU.
