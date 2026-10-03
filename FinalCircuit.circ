@@ -101,6 +101,7 @@
     <comp loc="(1550,950)" name="registor">
       <a name="label" val="B"/>
     </comp>
+    <wire from="(1530,460)" to="(1590,460)"/>
     <wire from="(460,1130)" to="(520,1130)"/>
     <wire from="(460,1160)" to="(530,1160)"/>
   </circuit>
@@ -625,11 +626,11 @@
     <comp lib="0" loc="(600,310)" name="Power"/>
     <comp lib="0" loc="(850,590)" name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="label" val="A9"/>
+      <a name="label" val="A_sign"/>
     </comp>
     <comp lib="0" loc="(850,620)" name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="label" val="B9"/>
+      <a name="label" val="B_sign"/>
     </comp>
     <comp lib="0" loc="(910,390)" name="Splitter">
       <a name="facing" val="west"/>
