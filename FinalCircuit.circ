@@ -132,10 +132,6 @@
       <a name="label" val="Data_in"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(190,600)" name="Pin">
-      <a name="appearance" val="classic"/>
-      <a name="width" val="8"/>
-    </comp>
     <comp lib="0" loc="(230,570)" name="Splitter">
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
