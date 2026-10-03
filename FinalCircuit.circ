@@ -98,7 +98,7 @@
       <a name="dataWidth" val="16"/>
     </comp>
     <comp loc="(1080,580)" name="SUM"/>
-    <comp loc="(1080,750)" name="DIVIDE"/>
+    <comp loc="(1080,750)" name="DIV"/>
     <comp loc="(1530,460)" name="registor">
       <a name="label" val="PC"/>
     </comp>
@@ -107,6 +107,12 @@
     </comp>
     <comp loc="(1540,800)" name="registor">
       <a name="label" val="ACC"/>
+    </comp>
+    <comp loc="(1550,1080)" name="registor">
+      <a name="label" val="Remainder"/>
+    </comp>
+    <comp loc="(1550,1210)" name="registor">
+      <a name="label" val="Result"/>
     </comp>
     <comp loc="(1550,950)" name="registor">
       <a name="label" val="B"/>
@@ -819,9 +825,9 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
   </circuit>
-  <circuit name="DIV">
+  <circuit name="div_circuit">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="DIV"/>
+    <a name="circuit" val="div_circuit"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(1010,140)" name="Splitter">
@@ -1335,9 +1341,9 @@
     <wire from="(970,360)" to="(970,400)"/>
     <wire from="(970,400)" to="(980,400)"/>
   </circuit>
-  <circuit name="DIVIDE">
+  <circuit name="DIV">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="DIVIDE"/>
+    <a name="circuit" val="DIV"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(100,120)" name="Pin">
@@ -1405,7 +1411,7 @@
     <comp lib="2" loc="(940,390)" name="Multiplexer">
       <a name="width" val="8"/>
     </comp>
-    <comp loc="(380,120)" name="DIV"/>
+    <comp loc="(380,120)" name="div_circuit"/>
     <wire from="(100,120)" to="(160,120)"/>
     <wire from="(100,140)" to="(160,140)"/>
     <wire from="(100,240)" to="(300,240)"/>
