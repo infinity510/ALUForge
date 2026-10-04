@@ -131,7 +131,7 @@
       <a name="label" val="ACC"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp loc="(970,670)" name="Address_and_pc"/>
+    <comp loc="(970,670)" name="Ins_fetch_and_pc"/>
     <wire from="(1020,450)" to="(1020,690)"/>
     <wire from="(1350,1030)" to="(1370,1030)"/>
     <wire from="(1350,1090)" to="(1370,1090)"/>
@@ -1888,9 +1888,9 @@
     <wire from="(750,180)" to="(750,230)"/>
     <wire from="(750,280)" to="(750,310)"/>
   </circuit>
-  <circuit name="Address_and_pc">
+  <circuit name="Ins_fetch_and_pc">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="Address_and_pc"/>
+    <a name="circuit" val="Ins_fetch_and_pc"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(1050,210)" name="Pin">
