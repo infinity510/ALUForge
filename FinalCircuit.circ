@@ -73,11 +73,6 @@
     <a name="circuit" val="ALUForge"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(1320,630)" name="Splitter">
-      <a name="facing" val="north"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
     <comp lib="0" loc="(1350,1090)" name="Tunnel">
       <a name="label" val="RESET"/>
     </comp>
@@ -128,9 +123,9 @@
     <comp lib="0" loc="(1590,910)" name="Tunnel">
       <a name="label" val="ACC_S"/>
     </comp>
-    <comp lib="0" loc="(360,830)" name="Pin">
+    <comp lib="0" loc="(170,830)" name="Pin">
       <a name="appearance" val="classic"/>
-      <a name="label" val="Start"/>
+      <a name="label" val="RESET"/>
     </comp>
     <comp lib="0" loc="(380,830)" name="Tunnel">
       <a name="label" val="RESET"/>
@@ -189,11 +184,15 @@
     <comp lib="5" loc="(270,580)" name="ROM">
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 8 16
-3202 0 0 502 a02
+3202 502 3202 502 a02 502 123 123
+123 323 43 0 234 342
 </a>
       <a name="dataWidth" val="16"/>
     </comp>
-    <comp lib="6" loc="(1240,510)" name="LedBar"/>
+    <comp lib="6" loc="(1320,440)" name="LedBar">
+      <a name="inputtype" val="row"/>
+    </comp>
+    <comp lib="6" loc="(740,950)" name="LED"/>
     <comp lib="9" loc="(380,885)" name="Text">
       <a name="text" val="000=END 001=MOV 010=LOAD 011=SUM 100=MUL 101=DIV"/>
     </comp>
@@ -248,15 +247,9 @@
     <wire from="(1180,800)" to="(1370,800)"/>
     <wire from="(1180,930)" to="(1180,1030)"/>
     <wire from="(1180,930)" to="(1370,930)"/>
-    <wire from="(1240,510)" to="(1240,610)"/>
-    <wire from="(1250,510)" to="(1250,610)"/>
-    <wire from="(1260,510)" to="(1260,610)"/>
-    <wire from="(1270,510)" to="(1270,610)"/>
-    <wire from="(1280,510)" to="(1280,610)"/>
-    <wire from="(1290,510)" to="(1290,610)"/>
-    <wire from="(1300,510)" to="(1300,610)"/>
-    <wire from="(1310,510)" to="(1310,610)"/>
-    <wire from="(1320,630)" to="(1640,630)"/>
+    <wire from="(1240,440)" to="(1240,630)"/>
+    <wire from="(1240,440)" to="(1320,440)"/>
+    <wire from="(1240,630)" to="(1640,630)"/>
     <wire from="(1330,1030)" to="(1370,1030)"/>
     <wire from="(1330,990)" to="(1330,1030)"/>
     <wire from="(1350,1090)" to="(1370,1090)"/>
@@ -269,10 +262,10 @@
     <wire from="(1370,760)" to="(1370,770)"/>
     <wire from="(1590,890)" to="(1640,890)"/>
     <wire from="(1640,630)" to="(1640,890)"/>
+    <wire from="(170,830)" to="(380,830)"/>
     <wire from="(260,450)" to="(1000,450)"/>
     <wire from="(260,450)" to="(260,590)"/>
     <wire from="(260,590)" to="(270,590)"/>
-    <wire from="(360,830)" to="(380,830)"/>
     <wire from="(440,820)" to="(1040,820)"/>
     <wire from="(440,820)" to="(440,950)"/>
     <wire from="(510,640)" to="(530,640)"/>
@@ -286,6 +279,7 @@
     <wire from="(660,1050)" to="(1110,1050)"/>
     <wire from="(660,1070)" to="(1090,1070)"/>
     <wire from="(660,1090)" to="(1080,1090)"/>
+    <wire from="(660,950)" to="(740,950)"/>
     <wire from="(660,970)" to="(1030,970)"/>
     <wire from="(660,990)" to="(1330,990)"/>
     <wire from="(680,780)" to="(1370,780)"/>
@@ -301,6 +295,7 @@
     <wire from="(690,770)" to="(690,890)"/>
     <wire from="(690,890)" to="(1370,890)"/>
     <wire from="(690,890)" to="(690,1010)"/>
+    <wire from="(740,950)" to="(750,950)"/>
     <wire from="(970,670)" to="(1040,670)"/>
     <wire from="(970,690)" to="(1000,690)"/>
   </circuit>
@@ -1113,6 +1108,10 @@
     <a name="circuit" val="decode"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1170,410)" name="Tunnel">
+      <a name="facing" val="south"/>
+      <a name="label" val="MOVE_SIGN"/>
+    </comp>
     <comp lib="0" loc="(1330,460)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="W_RES"/>
@@ -1144,7 +1143,7 @@
       <a name="type" val="output"/>
       <a name="width" val="8"/>
     </comp>
-    <comp lib="0" loc="(1630,550)" name="Pin">
+    <comp lib="0" loc="(1700,550)" name="Pin">
       <a name="appearance" val="classic"/>
       <a name="label" val="SIGN_OUT"/>
       <a name="type" val="output"/>
@@ -1278,7 +1277,7 @@
       <a name="label" val="END_INST"/>
       <a name="type" val="output"/>
     </comp>
-    <comp lib="0" loc="(630,210)" name="Splitter">
+    <comp lib="0" loc="(610,210)" name="Splitter">
       <a name="bit1" val="0"/>
       <a name="bit10" val="2"/>
       <a name="bit11" val="2"/>
@@ -1294,7 +1293,7 @@
       <a name="fanout" val="3"/>
       <a name="incoming" val="13"/>
     </comp>
-    <comp lib="0" loc="(690,180)" name="Tunnel">
+    <comp lib="0" loc="(690,100)" name="Tunnel">
       <a name="facing" val="south"/>
       <a name="label" val="SRC3"/>
       <a name="width" val="3"/>
@@ -1333,13 +1332,9 @@
     <comp lib="0" loc="(830,1040)" name="Tunnel">
       <a name="label" val="MOVE_SIGN"/>
     </comp>
-    <comp lib="0" loc="(950,260)" name="Tunnel">
-      <a name="facing" val="south"/>
-      <a name="label" val="MOVE_SIGN"/>
-    </comp>
     <comp lib="1" loc="(1250,450)" name="OR Gate"/>
     <comp lib="1" loc="(1270,300)" name="OR Gate"/>
-    <comp lib="1" loc="(1290,110)" name="OR Gate"/>
+    <comp lib="1" loc="(1280,110)" name="OR Gate"/>
     <comp lib="1" loc="(1320,250)" name="OR Gate"/>
     <comp lib="1" loc="(1340,190)" name="OR Gate"/>
     <comp lib="2" loc="(1470,370)" name="Multiplexer">
@@ -1355,10 +1350,13 @@
     <comp lib="2" loc="(800,1040)" name="Multiplexer">
       <a name="select" val="3"/>
     </comp>
-    <comp lib="9" loc="(1037,809)" name="Text">
+    <comp lib="9" loc="(1035,805)" name="Text">
       <a name="text" val="Sign of MOV source register (selected by SRC)"/>
     </comp>
-    <comp lib="9" loc="(1123,769)" name="Text">
+    <comp lib="9" loc="(1045,855)" name="Text">
+      <a name="text" val="Free decoder outputs: 011=SUM  100=MUL  101=DIV"/>
+    </comp>
+    <comp lib="9" loc="(1120,765)" name="Text">
       <a name="text" val="Register values as tunnels: ACC_V A_V B_V REM_V RES_V and signs ACC_S A_S B_S REM_S RES_S"/>
     </comp>
     <comp lib="9" loc="(1330,50)" name="Text">
@@ -1366,9 +1364,6 @@
     </comp>
     <comp lib="9" loc="(1480,660)" name="Text">
       <a name="text" val="DATA mux + SIGN mux: inputs 3,4,5 FREE for SUM, MUL, DIV"/>
-    </comp>
-    <comp lib="9" loc="(470,155)" name="Text">
-      <a name="text" val="Free decoder outputs: 011=SUM  100=MUL  101=DIV"/>
     </comp>
     <comp loc="(930,140)" name="Move"/>
     <comp loc="(930,360)" name="LOAD"/>
@@ -1380,11 +1375,13 @@
     <wire from="(1050,270)" to="(1270,270)"/>
     <wire from="(1070,210)" to="(1070,400)"/>
     <wire from="(1070,210)" to="(1290,210)"/>
-    <wire from="(1100,360)" to="(1100,380)"/>
-    <wire from="(1100,380)" to="(1370,380)"/>
+    <wire from="(1110,380)" to="(1110,420)"/>
+    <wire from="(1110,380)" to="(1370,380)"/>
+    <wire from="(1110,420)" to="(1170,420)"/>
+    <wire from="(1170,410)" to="(1170,420)"/>
     <wire from="(1250,450)" to="(1300,450)"/>
     <wire from="(1270,300)" to="(1320,300)"/>
-    <wire from="(1290,110)" to="(1340,110)"/>
+    <wire from="(1280,110)" to="(1340,110)"/>
     <wire from="(1300,430)" to="(1300,450)"/>
     <wire from="(1300,430)" to="(1340,430)"/>
     <wire from="(1320,250)" to="(1370,250)"/>
@@ -1425,7 +1422,10 @@
     <wire from="(1550,480)" to="(1630,480)"/>
     <wire from="(1580,280)" to="(1590,280)"/>
     <wire from="(1590,280)" to="(1590,360)"/>
-    <wire from="(1630,480)" to="(1630,550)"/>
+    <wire from="(1630,480)" to="(1630,530)"/>
+    <wire from="(1630,530)" to="(1710,530)"/>
+    <wire from="(1700,550)" to="(1710,550)"/>
+    <wire from="(1710,530)" to="(1710,550)"/>
     <wire from="(290,190)" to="(290,320)"/>
     <wire from="(290,320)" to="(370,320)"/>
     <wire from="(310,110)" to="(630,110)"/>
@@ -1470,17 +1470,21 @@
     <wire from="(600,1030)" to="(600,1040)"/>
     <wire from="(600,1030)" to="(760,1030)"/>
     <wire from="(600,40)" to="(630,40)"/>
+    <wire from="(610,210)" to="(610,220)"/>
+    <wire from="(610,220)" to="(630,220)"/>
     <wire from="(620,1040)" to="(620,1080)"/>
     <wire from="(620,1040)" to="(760,1040)"/>
-    <wire from="(630,210)" to="(630,340)"/>
+    <wire from="(630,180)" to="(650,180)"/>
+    <wire from="(630,190)" to="(670,190)"/>
+    <wire from="(630,220)" to="(630,340)"/>
     <wire from="(630,40)" to="(630,110)"/>
     <wire from="(650,160)" to="(650,180)"/>
     <wire from="(650,160)" to="(710,160)"/>
-    <wire from="(650,190)" to="(670,190)"/>
     <wire from="(660,380)" to="(660,430)"/>
     <wire from="(660,380)" to="(710,380)"/>
     <wire from="(670,180)" to="(670,190)"/>
     <wire from="(670,180)" to="(690,180)"/>
+    <wire from="(690,100)" to="(690,180)"/>
     <wire from="(690,180)" to="(710,180)"/>
     <wire from="(710,120)" to="(710,140)"/>
     <wire from="(710,400)" to="(710,440)"/>
@@ -1509,12 +1513,10 @@
     <wire from="(930,460)" to="(950,460)"/>
     <wire from="(930,480)" to="(930,520)"/>
     <wire from="(930,520)" to="(1360,520)"/>
-    <wire from="(930,90)" to="(1240,90)"/>
+    <wire from="(930,90)" to="(1230,90)"/>
     <wire from="(930,90)" to="(930,140)"/>
-    <wire from="(940,130)" to="(1240,130)"/>
+    <wire from="(940,130)" to="(1230,130)"/>
     <wire from="(940,130)" to="(940,360)"/>
-    <wire from="(950,260)" to="(950,360)"/>
-    <wire from="(950,360)" to="(1100,360)"/>
     <wire from="(950,460)" to="(950,490)"/>
     <wire from="(950,490)" to="(1390,490)"/>
     <wire from="(960,240)" to="(960,340)"/>
