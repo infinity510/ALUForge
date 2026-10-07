@@ -65,15 +65,24 @@ flowchart TD
 
 ## Schematic Diagrams (Logisim)
 
-> **Note:** The actual schematics are stored in `.circ` files which are XML-based logic models for Logisim. To view these exactly as they look in the simulator, you can open the project in Logisim. 
+Below are the circuit schematics built in Logisim for the ALUForge CPU architecture:
 
-*(Placeholders for exported images: To display your actual circuit diagrams below, export them as PNGs from Logisim and save them to an `images` folder in this repository, then update the paths).*
+### Register / Memory Block (8-bit Register)
+This 8-bit register is constructed using 8 independent D Flip-Flop cells. It includes common `CLOCK`, `WRITE` enable, and `RESET` lines.
+![8-bit Register](images/register_8bit.png)
 
-### ALUForge Top-Level Datapath
-<!-- ![ALUForge Top Circuit](images/ALUForge.png) -->
+### ALU - Addition and Subtraction
+This circuit performs arithmetic operations, combining addition (`APlusB`) and subtraction (`AminusB`, `BminusA`) by utilizing the basic `ADD` component and complement blocks (`Rcomp`).
+![ALU Add and Subtract](images/alu_add_sub.png)
 
-### 1-Bit Full Adder
-<!-- ![Full Adder](images/ADD_full.png) -->
+### ALU - Division Circuit
+This top-level signed division module uses a base division circuit to compute quotient and remainder, along with an XOR gate to determine the final sign based on the operands' signs.
+![Division Circuit](images/div_circuit.png)
 
-### Register / Memory Block
-<!-- ![Register](images/registor.png) -->
+### Control Unit - Decoder (Register Write)
+This part of the decoder takes an instruction and asserts the correct `WRITE` enable signals for the CPU's registers (ACC, A, B, REM, RES).
+![Decoder Write Logic](images/decoder_write.png)
+
+### Control Unit - Decoder (Register Read)
+This multiplexer-based decoder section selects which register's data (ACC, A, B, REM, RES) is sent onto the main data bus.
+![Decoder Read Logic](images/decoder_read.png)
